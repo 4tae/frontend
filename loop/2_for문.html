@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>for문</h2>
+    <script>
+        document.write('for문 위쪽의 문장<br>')
+        for (let i = 0; i < 3; i++) {
+            document.write('hello')
+            document.write('<br>')
+        }
+        document.write('for문 아래쪽의 문장<br>')
+
+        document.write('<br>')
+        document.write('<h2>실습</h2>')
+
+        //1,2,3,4,....10
+        for (let i = 1; i < 11; i++) {
+            document.write(`${i} `);
+        }
+        document.write('<br>')
+
+        //10,9,8...1
+        for (let i = 10; i > 0; i--) {
+            document.write(`${i} `);
+        }
+        document.write('<br>')
+
+        //1부터 10까지 총합 
+        let sumResult = 0;
+        for (let i = 1; i < 11; i++) {
+            sumResult += i;
+        }
+        document.write(`총합 : ${sumResult}`);
+        document.write('<br>')
+
+        // 1~10 누적곱
+        let timesResult = 1;
+        for (let i = 1; i < 11; i++) {
+            timesResult *= i;
+        }
+        document.write(`누적곱 : ${timesResult}`);
+        document.write('<br>')
+
+        //1~100 3의 배수
+        for (let i = 1; i < 101; i++) {
+            if (i % 3 == 0) {
+                document.write(`${i} `);
+            }
+        }
+        document.write('<br>')
+        
+        for (let i = 1; i <= 100; i++) {
+            if (i % 3 != 0) {
+                continue; // 자신을 감싸는 반복문의 다음 반복실행
+            }
+            document.write(i + ' ');
+        }
+        document.write('<br>');
+
+        //구구단 3단 출력하기
+        // ---3단---
+        // 3 x 1 = 3
+        document.write('<h3>3단</h3>')
+        let n = 3;
+        for (let i = 1; i < 10; i++) {
+            document.write(`${n} x ${i} = ${n * i}`);
+            document.write('<br>');
+        }
+    </script>
+</body>
+
+</html>

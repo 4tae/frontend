@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        h2{
+            text-align: center;
+            color: white;
+        }
+        p{
+            text-align: center;
+            font-size: 50px;
+            color: aqua;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <h2>결과</h2>
+    <script>
+        //1. 사용자에게 정수를 입력 받아서
+        // 해당 점수 90이상 A, 80이상 90미만 B , 70~80 C , ~70 F
+        // 당신의 점수 C입니다
+
+        let score = Number(prompt('점수 입력:'));
+        let grade = 'F';
+        if(score>=90){
+            grade = 'A';
+        }
+        else if(score>=80){
+            grade = 'B';
+        }
+        else if(score>=70){
+            grade = 'C';
+        }
+        document.write('<p>당신의 점수는 ' + grade + '입니다.</p>');
+        document.write(`<p>당신의 점수는 ${grade}입니다.</p>`); // back tic >> 왼쪽 esc 밑 ~키
+
+        //2. 사용자에게 년도 입력 받고
+        // 윤년이라면 윤년, 평년이라면 평년 출력
+        // 4의 배수, 100의 배수, 400의 배수 >> 윤년
+        // 4의 배수 , 100의 배수, 400의 배수 X 라면 평년
+        // 4의 배수, 100의 배수 X , 400의 배수X  >> 윤년
+        // 4의 배수 X, 100 X, 400 X >> 평년
+
+        let year = Number(prompt('연도 입력'));
+        let yearType = '평년';
+        
+        if((year%400 ==0) || 
+        (year%4 ==0 && year % 100!=0)){
+            yearType = '윤년';
+        }
+        document.write(`<p>${year}년도는 ${yearType}입니다.</p>`)
+
+    </script>
+</body>
+</html>

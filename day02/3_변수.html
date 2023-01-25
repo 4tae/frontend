@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 변수의 선언과 값 대입
+        var age = 20;
+        console.log(age);
+
+        age = 50;
+        console.log(age);
+        age = 'hello';
+        console.log(age);
+
+        // 다른 파일에 있는데 여기선 없으면 오류는 안나는데 빈칸 출력?
+        // 선언만 되어있고, 기존 값은 초기화
+        console.log(studentName); 
+        console.log(typeof studentName);
+
+        //var 없이 선언시
+        dd = 10;
+        console.log(dd);
+
+        function f(){
+            variable1 = 10;
+            var variable2 = 20;
+        }
+        f();
+        console.log(variable1);
+        // var이 붙은 변수는 함수지역 내에서 사용가능
+        //console.log(variable2);
+
+        var day = 15;   // 변수 선언과 최초 값 대입 (초기화)
+        day = 16;   // 값의 재할당
+
+        var day;    // 변수 재선언(똑같은 이름의 변수 만들기 가능)
+        day = 50;
+        console.log(day);
+
+        console.log('=====================');
+        //let로 선언되면 초기화 되기 전에 access 할 수 없다.
+        //console.log(number);
+        let number = 10;    // 변수 초기화 & 선언 한번에
+        console.log(number);
+        number = 50;
+        console.log(number);
+        // 똑같은 이름의 변수 재선언시 오류
+        //let number = 100;
+
+        console.log('--------------------------');
+        //const로 선언되면 초기화 되기 전에 access 할 수 없다.
+        //console.log(KEY);
+        const KEY = 3;
+        //const 로 선언되면 재할당, 재선언 불가능, 초기화된 값만 사용가능
+        // KEY = 10;
+        console.log(KEY);
+
+
+
+
+    </script>
+</body>
+</html>

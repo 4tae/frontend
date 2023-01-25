@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 사용자에게 정수 하나 입력 받아서 해당 정수 4로 나눈 몫과 나머지 출력
+        let i = Number(prompt('정수 입력'));
+        document.write('몫 : ' + parseInt(i/4)+ ' 나머지 : ' + (i%4) );
+        
+        // 2. 사용자에게 두자리 정수 입력받고 십의 자리 ,  일의 자리 출력
+        let i2 = Number(prompt('두자리 정수'));
+        document.write('십의 자리 : ' + parseInt(i2/10)+ ' 일의자리 : ' + (i2%10) );
+        
+        //3. 노래 한곡당 300원 코노, 금액ㄱ 입력받고 부를 수 있는 노래 곡수 와 잔돈
+        //  1600 --> 부를 수 있는 노래는 5곡, 잔돈 100원
+        let input = Number(prompt('금액 입력'));
+        document.write(input + '--> 부를 수 있는 노래는 '+ parseInt(input/300) + '곡, 잔돈 ' + (input%300)+'원');
+
+        // 사용자에게 국어 점수, 영어점수, 수학점수 입력 받고 평균점수 출력
+        let kScore = Number(prompt('국어 점수 입력'));
+        let eScore = Number(prompt('영어 점수 입력'));
+        let mScore = Number(prompt('수학 점수 입력'));
+        document.write('평균 점수 : ' + ((kScore + eScore + mScore)/3));
+    </script>
+</body>
+</html>

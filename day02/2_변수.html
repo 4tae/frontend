@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>자바스크립트 변수</h1>
+
+    <script>
+        var studentName;           //name == 저장공간
+        studentName = '김두근';    // name == 저장공간
+        console.log(studentName + 20);  // name == 저장된 값으로 치환하여 생각
+
+        // console.log(age);
+        // 선언되지 않은 변수는 저장된 값으로 치환하여 사용할 수 없다
+
+
+        // 변수 속에 값을 대입하지 않았다면 undefined
+        var age;
+        console.log(age);
+        age = 20;
+        console.log(age);
+
+
+        // 오류가 나지 않는다
+        console.log(price);
+        var price = 2000;
+        
+    </script>
+        <h1>재사용</h1>
+    <script>
+        document.write(age);
+    </script>
+</body>
+</html>

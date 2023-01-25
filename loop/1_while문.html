@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>while 문</h2>
+    <script>
+        let i = 0;
+        while(i<3){
+            // console 창에서는 동일한 내용이 반복되면 한번만 알려주고, 앞에 반복횟수를 출력해준다
+            console.log('hello');
+            document.write('hi<br>');   
+            i++;    // i = i + 1
+        }
+        document.write('while문 바깥!<br>');
+
+        //랜덤한 수를 받아오데 5가 나오면 더이상 받지 말것
+        //랜덤한 숫자를 받아오는 함수 Math.random()
+        // 함수 사용 결과가 0~1(1은 미포함)사이의 랜덤한 숫자가 된다
+
+        // Math.floor(값) : 함수의 사용결과가 괄호 안에 있는 값을 내림한 결과 
+        document.write(Math.floor(Math.random()*10));
+        
+        document.write('<br>');
+        // 0~9 사이의 랜덤한 숫자들을 출력
+        // 5가 나올 경우 멈춘다
+        let num = Math.floor(Math.random()*10);
+        while(num!=5){
+            document.write(`랜덤 결과는 ${num}입니다.<br>`);
+            num = Math.floor(Math.random()*10);
+        }
+        
+        document.write('<br><br>');
+        
+        while(true){
+            let num2 = Math.floor(Math.random()*10);
+            if(num2 % 2==0){
+                continue;   // 짝수 일 경우 출력 X
+            }
+            
+            if(num2 ==5) {
+                break;          // 5가 나올 경우 while 문 탈출
+            }
+            document.write(`두번째 시도 랜덤 결과는 ${num2}입니다.<br>`);
+        }
+        
+        
+
+
+        document.write('<br><br>');
+        let num3 = 0;
+        do{
+            num3 = Math.floor(Math.random()*10);
+            document.write(`num3에 들어 있는 값 ${num3}<br>`);
+        }while(num3!=5);
+        // num3는 do{}의 중괄호 내부에서만 사용가능하므로 while()안에서는 사용불가 
+        // 둘다 사용하려면 밖에 선언해줘야한다
+        // 코드에서 num3이 5가 나오면 do를 5로 실행하고 조건식을 확인하므로 5가 출력되고, 탈출한다
+
+        </script>
+</body>
+</html>
