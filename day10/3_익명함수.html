@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>익명함수</h2>
+    <script>
+        let a = f1;
+        function f1(){
+            console.log('이름있는 f1함수');
+        }
+
+        let b = function(){
+            console.log('익명함수1');
+        };
+        let c = () => {
+            console.log('익명함수3');
+        };
+        // b와 C는 동일        
+        
+        sort(a);
+        sort(b);    
+        // 함수가 b라는 변수에 들어간 것처럼
+        // 인자 자리에 함수가 들어갈 수 있다.
+        sort(function (){console.log('익명함수2')});
+        
+        sort(()=>{
+            console.log('익명함수4');
+        });
+
+
+        function sort(key){
+            key();
+        }
+
+        let an1 = function (){
+            return '안녕';
+        };
+        console.log(an1());
+
+        let an2 = () =>{
+            return '안녕2';
+        }
+        console.log(an2());
+
+        
+
+    </script>
+</body>
+</html>
